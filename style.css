@@ -1,0 +1,170 @@
+* {
+    box-sizing:border-box ;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --blue: #3EA1DB;
+    --blue-dark: #574AE8;
+    --white: #FFF;  
+    --title: #313131;
+    --background:  rgba(255, 255, 255, 0.2);
+    --text: rgba(214, 209, 209, 0.996);    
+    --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+    --data: #717171;
+}
+
+body {
+    background-color: var(--text);
+}
+
+html {
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+}
+
+header {
+    padding: 50px;
+    background: var(--linear);
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho-menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    width: 50%;
+    align-self: center;
+    color: var(--white);
+}
+
+.cabecalho-pesquisa {
+    position: relative;
+    width: 50%;
+    height: 65px;
+    background: var(--background);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    align-self: center;
+}
+
+.cabecalho-pesquisa input {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: left;
+    background: none;
+    border: none;
+    margin-left: 15px;
+    opacity: 0.5;
+}
+
+.cabecalho-pesquisa button {
+    background:  var(--white);
+    background: none;
+    border: none;
+    color: var(--white);
+    margin-left: 15px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: var(--white);
+    opacity: 50%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container-item{
+    width: 50%;
+    height: auto ;
+    background-color: var(--white);
+    margin: 15px;    
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
+}
+
+.container-data{
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--data);
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon {
+    fill: #574ae801;
+    stroke: #574ae8;
+    stroke-width: 7;
+    transition: fill 0.3s;
+    cursor: pointer;
+  }
+  
+  #icon.filled,
+  #icon:hover {
+    fill: #574ae8;
+}
+
+.container-title{
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.container-text{
+    font-size: 18px;
+}
+
+@media screen and (max-width: 414px)  {
+
+    header{
+        padding: 10px;
+    }
+
+    .cabecalho-menu{
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .cabecalho-pesquisa{
+        width: 90%;
+        height: 40px;
+    }
+
+    .cabecalho-pesquisa input{
+        font-size: 14px;
+    }
+
+    .container{
+        margin-top: 25px;
+    }
+
+    .container-item{
+        width: 90%;       
+        margin: 10px;
+    }
+
+    .container-data{
+        font-size: 14px;
+    }
+
+    .container-title{
+        font-size: 18px;
+    }
+
+    .container-text{
+        font-size: 14px;
+    }
+    
+}
